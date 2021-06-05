@@ -38,5 +38,6 @@ mvn test
 
 ## Using the Postman Collection
 A Postman collection is available with this project - *resources/BookDemo.postman_collection.json*. This collection can be imported into Postman and used to test the APIs.
-**Note:** The url of the requests is set to **localhost:8000**, if you are running this project elsewhere update the *url* variable in the collection.
 Each of the postman requests have a few basic test cases that can be used to validate the APIs. When using this collection to test the APIs, it is recommended to use the Postman runner that runs all the requests in the collection.
+
+**Note:** The url of the requests is set to **localhost:8000**, if you are running this project elsewhere update the *url* variable in the collection.
