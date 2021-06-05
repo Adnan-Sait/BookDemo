@@ -23,7 +23,9 @@ mvn clean install
 This will run the tests and package the project into a JAR file.
 
 ## Running the Project
-The JAR file can be directly run on Java using this command in the build directory,
+The JAR file can be directly run on Java.
+You can take the JAR from the [InitialBuild](https://github.com/Adnan-Sait/BookDemo/releases/tag/v0.0.1-alpha) release
+ using this command in the build directory,
 ```
 java -jar demo-0.0.1-SNAPSHOT.jar
 ```
