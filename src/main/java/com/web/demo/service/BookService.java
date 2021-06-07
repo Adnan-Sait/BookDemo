@@ -13,7 +13,6 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import javax.transaction.Transactional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
@@ -25,12 +24,15 @@ import com.web.demo.repository.BookRepository;
 @Service
 @Transactional
 public class BookService {
+
+	private final EntityManager em;
 	
-	@Autowired
-	private EntityManager em;
+	private final BookRepository bookRepository;
 	
-	@Autowired
-	private BookRepository bookRepository;
+	public BookService(EntityManager em, BookRepository bookRepository) {
+		this.em = em;
+		this.bookRepository = bookRepository;
+	}
 	
 	public Book createBook(Book book) throws ForeignKeyViolationException {
 		try {
